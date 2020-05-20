@@ -7,16 +7,18 @@ from flask import Flask, request, render_template, jsonify
 
 #initialize the flask app
 app = Flask('sousChef')
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 300
 
+#homepage
 @app.route('/')
-# create the controller
+
 def home():
     # return the view
-    return render_template('form.html')
+    return render_template('main.html')
 	
-#route 3:
+#sumission page
 @app.route('/submit')
-#create the controller
+
 def submit():
 	user_input = request.args
 
@@ -27,7 +29,7 @@ def submit():
 	user_ing.append(user_input['ing_3'])
 
 	#call the dataframe
-	df = pd.read_csv('../datasets/final_dataset.csv')
+	df = pd.read_csv('final_dataset.csv')
 
 	# Find recipes with intersections
 	d3, d2, d1, d = intersect(df, user_ing)
@@ -66,4 +68,4 @@ def submit():
 
 #run the app
 if __name__ == '__main__':
-	app.run(debug = True)
+	app.run(debug=True)

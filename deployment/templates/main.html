@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>SousChef</title>
+  <link rel="stylesheet" href="/static/css/main.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  
+</head>
+
+<body style="height:1500px">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" href="#home" style="font-family: georgia">
+          <img src="/static/css/images/plz.png" width= "40" height= "40"> 
+      </a>
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="#FOOD STORY">FOOD STORY</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#myrecipe">RECIPES</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container-fluid" style="margin-top:80px">
+
+        <div class="titleround"> 
+        <img src="/static/css/images/souschef.jpg" width= "80" height= "110">
+        <h1>
+          <center>SousChef</center>
+        </h1>
+        <h5>
+            <center>Personalized Recipes at Your Fingertips</center>
+        </h5>
+        
+        </div>
+
+        
+        <div class="blackbody">
+            <h4>FOOD STORY</h4>
+            <p class="boldtext"> We know you live busy a life! From work to chores to other responsibilities, you have a lot on your plate. For this reason, SousChef is here to spice things up for all those that want to discover new flavours, chop their time in half, and bite into fresh recipes! </p>
+
+            <p class= "boldtext"> Below, tell SousChef 3 ingredients in your fridge and prepare to recieve a mouth-watering new recipe. When selecting your ingredients, be sure to reference the Canadian Food Guide recommendation by selecting fruit/vegetables, proteins, and whole grains. </p>
+
+            <center>
+                <img src="/static/css/images/plate.png" width= "550" height= "500" style= "vertical-align:middle;margin:50px 0px">
+            </center>
+            
+
+        </div>
+
+
+        <div class="body"> 
+        <form action="/submit">
+            <h4>RECIPES</h4>
+
+            <p class= "boldtext"> What's in your fridge? </p>
+
+
+            <p>
+                <label for="Ingredient #1">Ingredient 1:
+                </label><br>
+                <input type="text" name="ing_1">
+            </p>
+
+            <p>
+                <label for="Ingredient #2">Ingredient 2:
+                </label><br>
+                <input type="text" name="ing_2">
+            </p>
+
+            <p>
+                <label for="Ingredient #3">Ingredient 3:
+                </label><br>
+                <input type="text" name="ing_3">
+            </p>
+
+            <p><button type="submit">Find Recipe</button></p>
+        </form>
+
+        </div>
+    </div>
+
+ 
+</body>
+
+</html>
