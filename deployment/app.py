@@ -56,7 +56,7 @@ def submit():
 	meal_type = out3.meal_type[2]
 	cuisine = out3.cuisine[2]
 
-	ingredients = out3.ingredients[2]
+	ingredients = str(out3.ingredients[2])
 	instructions = out3.instructions[2]
 
 	return render_template('result.html', titles3_name1=titles3_name1, 

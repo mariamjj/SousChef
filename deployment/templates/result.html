@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Recipe Recommendation</title>
+    <title>SousChef</title>
     <link rel="stylesheet" href="/static/css/main.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
+
 </head>
 
 <body style="height:1500px">
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
       <a class="navbar-brand" href="#home" style="font-family: georgia">
-          <img src="/static/css/images/plz.png" width= "40" height= "40"> 
+          <img src="/static/css/images/edit_sc.png" width= "33" height= "42" style="float: left; top: -10px; position: relative;"> 
+      </a>
+    </div>
+
+      <ul class="nav navbar-nav" style="float: right;">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#MATCHES">MATCHES</a></li>
+        <li><a href="#RECOMMENDATION">RECOMMENDATION</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" href="#home" style="font-family: georgia">
+          <img src="/static/css/images/edit_sc.png" width= "40" height= "50"> 
       </a>
 
       <ul class="navbar-nav">
@@ -31,26 +47,26 @@
         </li>
 
       </ul>
-    </nav>
+    </nav> -->
 
 
-<div class="container-fluid" style="margin-top:80px">
+<div class="container" style="margin-top:50px">
 
-    <div class="titleround"> 
-        <img src="/static/css/images/souschef.jpg" width= "80" height= "110">
+    <div class="titleround" id= "home"> 
+        <img src="/static/css/images/edit_sc.png" width= "80" height= "110">
         <h1>
           <center>SousChef</center>
         </h1>
-        <h5>
+        <h4>
             <center>Personalized Recipes at Your Fingertips</center>
-        </h5>
+        </h4>
         
         </div>
 
   <div class="blackbody"> 
 
-    <h4>MATCHES</h4>
-    <p class="boldtext"> 
+    <h3>MATCHES</h3>
+    <p class="boldtext" id="MATCHES"> 
 
         SousChef found the following recipes that use all 3 ingredients: {{titles3_name1}}, {{titles3_name2}}, {{titles3_name3}}
 
@@ -70,39 +86,49 @@
 
   </div>
 
-  <div class="body"> 
+  <div class="body" id="RECOMMENDATION"> 
 
-    <h4>RECOMMENDATION</h4>
+    <h3>RECOMMENDATION</h3>
 
-    <p class="boldtext"> 
+    <img src="https://media.giphy.com/media/7Xyhhl496aWel4811p/giphy.gif" style="float: left; margin-bottom: 20px">
+
+    <p class="imgtext"> 
 
         {{name}}; {{cuisine}} cuisine!
 
     </p>
 
-    <p class="boldtext"> 
+    <p class="imgtext"> 
 
         Ingredients:
 
     </p>
 
-    <p class="boldtext"> 
+    <p class="imgtext"> 
 
         {{ingredients}}
 
     </p>
 
-    <p class="boldtext"> 
+    <p class="imgtext"> 
 
         Instructions:
 
     </p>
 
-    <p class="boldtext"> 
+    <p class="imgtext"> 
 
         {{instructions}}
 
     </p>
+
+    <button onclick="goBack()">Back Home</button>
+
+    <script>
+    function goBack() {
+      window.history.go(-1);
+    }
+    </script>
 
   </div>
 

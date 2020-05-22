@@ -6,10 +6,9 @@
   <link rel="stylesheet" href="/static/css/main.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
@@ -18,40 +17,56 @@
 
 <body style="height:1500px">
 
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
       <a class="navbar-brand" href="#home" style="font-family: georgia">
-          <img src="/static/css/images/plz.png" width= "40" height= "40"> 
+          <img src="/static/css/images/edit_sc.png" width= "33" height= "42" style="float: left; top: -10px; position: relative;"> 
+      </a>
+    </div>
+
+      <ul class="nav navbar-nav" style="float: right;">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#FOOD STORY">FOOD STORY</a></li>
+        <li><a href="#RECIPES">RECIPES</a></li>
+      </ul>
+    </div>
+  </nav>
+
+    <!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+      <a class="navbar-brand" href="#home" style="font-family: georgia">
+          <img src="/static/css/images/edit_sc.png" width= "40" height= "50" style="float: left;"> 
       </a>
 
-      <ul class="navbar-nav">
+      <ul class="navbar-nav" style="float: right;">
         <li class="nav-item">
-          <a class="nav-link" href="#FOOD STORY">FOOD STORY</a>
+          <a class="nav-link" href="#FOOD STORY";>FOOD STORY</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#myrecipe">RECIPES</a>
+          <a class="nav-link" href="#RECIPES";>RECIPES</a>
         </li>
       </ul>
-    </nav>
+    </nav> -->
 
-    <div class="container-fluid" style="margin-top:80px">
+    <div class="container" style="margin-top:50px">
 
-        <div class="titleround"> 
-        <img src="/static/css/images/souschef.jpg" width= "80" height= "110">
+        <div class="titleround" id= "home"> 
+        <img src="/static/css/images/edit_sc.png" width= "80" height= "110">
         <h1>
           <center>SousChef</center>
         </h1>
-        <h5>
+        <h4>
             <center>Personalized Recipes at Your Fingertips</center>
-        </h5>
+        </h4>
         
         </div>
 
         
-        <div class="blackbody">
-            <h4>FOOD STORY</h4>
-            <p class="boldtext"> We know you live busy a life! From work to chores to other responsibilities, you have a lot on your plate. For this reason, SousChef is here to spice things up for all those that want to discover new flavours, chop their time in half, and bite into fresh recipes! </p>
+        <div class="blackbody" id= "FOOD STORY">
+            <h3>FOOD STORY</h3>
+            <p class="boldtext"> We know you live a busy life! From work to chores to other responsibilities, you have a lot on your plate. For this reason, SousChef is here to spice things up for all those that want to discover new flavours, chop their time in half, and bite into fresh recipes! </p>
 
-            <p class= "boldtext"> Below, tell SousChef 3 ingredients in your fridge and prepare to recieve a mouth-watering new recipe. When selecting your ingredients, be sure to reference the Canadian Food Guide recommendation by selecting fruit/vegetables, proteins, and whole grains. </p>
+            <p class= "boldtext"> Below, tell SousChef 3 ingredients in your fridge and prepare to recieve a mouth-watering new recipe. Remember the following when selecting your ingredients for your meal: </p>
 
             <center>
                 <img src="/static/css/images/plate.png" width= "550" height= "500" style= "vertical-align:middle;margin:50px 0px">
@@ -61,13 +76,57 @@
         </div>
 
 
-        <div class="body"> 
+        <div class="body" id= "RECIPES"> 
         <form action="/submit">
-            <h4>RECIPES</h4>
+            <h3>RECIPES</h3>
 
-            <p class= "boldtext"> What's in your fridge? </p>
+            <p class= "boldtext"> What's in your fridge? Go ahead! Tell SousChef 3 ingredients that you're interested in using in your next recipe. Insert each ingredient one by one in the cells below. </p>
 
+            <img src= "https://media.giphy.com/media/9rv2G8HBJ01xUUoLJW/giphy.gif" style="float: left; top: -100px; position: relative;">
 
+            <p>
+              <label for="ing_1">Ingredient 1:</label>
+                <select name="ing_1" id="ing_1">
+                  <option value="chicken">Chicken</option>
+                  <option value="crab">Crab</option>
+                  <option value="avocado">Avocado</option>
+                  <option value="beef">Beef</option>
+                  <option value="kale">Kale</option>
+                  <option value="pepper">Pepper</option>
+                  <option value="bacon">Bacon</option>
+                </select>
+            </p>
+
+            <p>
+              <label for="ing_2">Ingredient 2:</label>
+                <select name="ing_2" id="ing_2">
+                  <option value="lettuce">Lettuce</option>
+                  <option value="mushroom">Mushroom</option>
+                  <option value="cheese">Cheese</option>
+                  <option value="onion">Onion</option>
+                  <option value="olive">Olive</option>
+                  <option value="carrot">Carrot</option>
+                  <option value="apple">Apple</option>
+                  <option value="banana">Banana</option>
+                  <option value="oil">Oil</option>
+                   <option value="mayonnaise">Mayo</option>
+                </select>
+            </p>
+
+            <p>
+              <label for="ing_3">Ingredient 3:</label>
+                <select name="ing_3" id="ing_3">
+                  <option value="cheese">Cheese</option>
+                  <option value="tomato">Tomato</option>
+                  <option value="garlic">Garlic</option>
+                  <option value="potato">Potato</option>
+                  <option value="flour">Flour</option>
+                  <option value="salt">Salt</option>
+                  <option value="artichoke">Artichoke Hearts</option>
+                </select>
+            </p>
+
+<!-- 
             <p>
                 <label for="Ingredient #1">Ingredient 1:
                 </label><br>
@@ -84,9 +143,21 @@
                 <label for="Ingredient #3">Ingredient 3:
                 </label><br>
                 <input type="text" name="ing_3">
+            </p> -->
+
+            &ensp;
+
+            <p>
+              <center>
+                
+                <button type="submit">Find Recipe</button>
+
+              </center>
+
             </p>
 
-            <p><button type="submit">Find Recipe</button></p>
+            &ensp;
+
         </form>
 
         </div>

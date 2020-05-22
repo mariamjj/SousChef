@@ -22,6 +22,7 @@ body {
     padding: 20px 10px;
     opacity: 0.88;
     border-radius: 25px;
+    align-items: center;
   }
 
   .blackbody {
@@ -47,10 +48,10 @@ body {
   }
 
   h1 { 
-    font-family: georgia;
+    font-family: arial;
     color: black;
     display: block;
-    font-size: 75px;
+    font-size: 1px;
     margin-top: 8px;
     margin-bottom: 8px;
     margin-left: 0;
@@ -58,20 +59,20 @@ body {
     font-weight: bold;
 }
 
-  /*h2 {
-    color: #202020;
-    font-family: georgia;
+  h2 {
+    color: black;
+    font-family: arial;
     display: block;
     font-size: 0.5px;
     margin-top: 40px;
     text-align: center;
     letter-spacing: -2px;
     font-style: italic;
-  }*/
+  }
    
   h3 {
-    font-family: georgia;
-    color: #383838;
+    font-family: arial;
+    color: black;
     font-size: 2px;
     font-weight: 100;
     margin-top: 30px;
@@ -80,7 +81,7 @@ body {
   }
 
   h4 {
-    font-family: georgia;
+    font-family: arial;
     color: black;
     font-size: 1px;
     font-weight: 100;
@@ -90,8 +91,8 @@ body {
 
   }
 
-h5 {
-    font-family: georgia;
+  h5 {
+    font-family: arial;
     color: #282828;
     font-size: 1px;
     font-weight: 100;
@@ -103,7 +104,7 @@ h5 {
   }
 
   .text{
-    font-family: georgia;
+    font-family: arial;
     margin: 50px auto;
     width:90%;
     text-align: center;
@@ -112,7 +113,7 @@ h5 {
   }
 
   .boldtext{
-    font-family: georgia;
+    font-family: arial;
     margin: 50px auto;
     width:90%;
     text-align: center;
@@ -121,6 +122,15 @@ h5 {
     font-style: bold;
   }
 
+  .imgtext{
+    font-family: arial;
+    margin: 50px auto;
+    width:90%;
+    text-align: right;
+    font-size: large;
+    color: black;
+    font-style: bold;
+  }
 
   ul {
     list-style-type: none;
@@ -148,11 +158,10 @@ li a:hover {
 }
 
 form label {
-  font-family: georgia;
+  font-family: arial;
   color: black;
   font-size: x-large;
   display: block;
-  font-style: bold;
   padding: 10px 0;
 }
  
@@ -165,7 +174,8 @@ form input#ing_1, form input#ing_2, form input#ing_2 {
   border-radius: 3px;
   border: 1px solid #DCDCDC;
   padding: 5px;
-  font-size: 26px;
+  font-size: 32px;
+  font-family: arial;
   margin: 12px;
 }
  
@@ -183,8 +193,8 @@ form textarea#message {
 }
  
 form input#submit {
-  height:80px;
-  width:100px;
+  height:100px;
+  width:120px;
   margin: auto;
   display: -webkit-box;
   -webkit-border-radius: 3px; 
@@ -193,7 +203,8 @@ form input#submit {
   border:1px solid #d8d8d8;
   padding: 10px; 
   font-weight:bold; 
-  font-size:22px;
+  font-size:32px;
+  font-family: arial;
   text-align: center; 
   color: #000000; 
   background-color: #f4f4f4;
